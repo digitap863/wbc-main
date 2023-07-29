@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  
+
+
+.body {
+    /* background-image: linear-gradient(to bottom, #060b46, #540075); */
+    background-color: #080B2A;
+    /* You may want to set the height of the body to fill the viewport */
+    min-height: 100vh;
+    margin: 0;
+    /* Add other styles as needed */
+  }
+  
