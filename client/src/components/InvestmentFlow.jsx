@@ -7,7 +7,7 @@ function InvestmentFlow() {
         <div className='md:mx-44 mx-3 mt-10 flex flex-col items-center'>
             <h2 className='font-zen text-white text-xl md:text-3xl w-72 text-center'>WHY INVEST IN WBC ?</h2>
             <p className='font-space text-slate-400 my-3 md:w-[27rem] text-sm text-center'>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business end-to-end.</p>
-            <div className='flex md:mt-12 mt-5 flex-col w-full relative'>
+            <div className='flex md:mt-12 mt-5 flex-col w-full relative items-center'>
                 <div className='flex md:flex-row flex-col  md:items-start items-end'>
                     <div className='relative h-[9.5rem] group'>
                         <img src={frame} alt="" className='absolute left-[24rem] w-[9rem] top-[4rem] hidden md:block' />

@@ -11,8 +11,22 @@ const NftProject = lazy(()=>import('../pages/Projects/NftProject'))
 const RealEstate = lazy(()=>import('../pages/Projects/RealEstate'))
 const WbcCoin = lazy(()=>import('../pages/Projects/WbcCoin'))
 const SeefShirt = lazy(()=>import('../pages/Projects/SeefShirt'))
+import logo from '../assets/Images/wbcLogo.png'
 
-const FallbackUI = () => <div className='bg-red-500 h-full'>Loading...</div>;
+
+const FallbackUI = () => 
+<div className="preloader loaded-success fixed top-0 inset-0 bg-transparent bg-opacity-10 z-50">
+<div className="absolute left-[35%] md:left-[46%] top-1/2 transform -translate-y-1/2">
+  <div className="relative mx-auto my-12">
+    <div className="inline-block">
+      <span className="relative flex h-10 w-full">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+        <img className='relative animate-bounce inline-flex rounded-full h-10' src={logo} alt="" />
+      </span>
+    </div>
+  </div>
+</div>
+</div>;
 
 function ProjectRouter() {
   return (

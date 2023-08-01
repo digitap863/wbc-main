@@ -7,7 +7,7 @@ function CoinFlow() {
         <div className='md:mx-44 mx-2 mt-10 flex flex-col items-center'>
             <h2 className='font-zen text-white md:text-3xl w-72 text-center'>WHY INVEST IN WBC ?</h2>
             <p className='font-space text-slate-400 my-3 md:w-[27rem] text-sm text-center'>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business end-to-end.</p>
-            <div className='flex mt-8 flex-col w-full relative md:px-0 px-4'>
+            <div className='flex mt-8 flex-col w-full relative md:px-0 px-4 items-center'>
                 <div className='flex md:flex-row flex-col  md:items-start items-end'>
                     <div className='relative h-[9.5rem] group'>
                         <img src={frame} alt="" className='md:absolute left-[24rem] w-[9rem] top-[4rem] hidden md:block' />
