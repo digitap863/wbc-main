@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Chart from './chart';
+import Chart from './Chart';
 
 function CryptoTable() {
     const [currencies, setCurrencies] = useState([])

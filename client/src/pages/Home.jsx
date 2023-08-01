@@ -7,7 +7,6 @@ import Footer from '../components/Footer'
 import CryptoTable from '../components/cryptoTable'
 import InvestorSwiper from '../components/InvestorSwiper'
 import InvestmentFlow from '../components/InvestmentFlow'
-// const InvestorSwiper = lazy(()=>import('../components/InvestorSwiper'))
 
 function Home() {
   return (

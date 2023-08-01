@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import logo from '../assets/Images/wbcLogo.png'
-import { useNavigate } from 'react-router-dom'
 
 function Navbar({active}) {
   const navItems = [

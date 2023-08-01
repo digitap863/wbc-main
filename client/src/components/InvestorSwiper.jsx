@@ -1,6 +1,6 @@
 import React from 'react';
 import InvestorImage from '../assets/Images/investorImage.png'
-import icon from '../assets/Images/locicon.png'
+import icon from '../assets/Images/locIcon.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
