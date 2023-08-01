@@ -11,7 +11,7 @@ const RandomWhiteDiv = () => {
     };
 
     return (
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none md:block hidden">
             {Array.from({ length: numberOfDivs }).map((_, index) => {
                 const { x, y } = generateRandomPosition();
                 return (
