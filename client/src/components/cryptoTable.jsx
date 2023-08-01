@@ -30,12 +30,6 @@ function CryptoTable() {
         }
         fetchData()
     }, [])
-//    async function historicPrice(id){
-//         const historicalPriceUrl = `https://api.coingecko.com/api/v3/coins/${id}/market_chart/range?vs_currency=inr&from=1420070400&to=1514764799`
-//       const historicalResponse = await fetch(historicalPriceUrl);
-//     const historicalData = await historicalResponse.json()
-//     console.log(historicalData);
-// }
     function priceColor (price){
         if(price>=0){
             return 'text-green-500'
@@ -44,12 +38,12 @@ function CryptoTable() {
         }
     }
     return (
-        <div className='relative group mx-16 mt-24'>
+        <div className='relative group mx-3 md:mx-16 md:mt-24 mt-20'>
             <div className="absolute inset-0.5 bg-gradient-to-r from-pink-600  to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-            <div className='relative border flex  bg-[#060b46] p-2 m-2 border-gray-600 rounded-lg'>
+            <div className='relative border flex  bg-[#060b46] p-2 m-2 border-gray-600 rounded-lg overflow-x-auto'>
 
                 <table className='w-full m-1 rounded-lg order'>
-                    <thead className='font-zen text-white border-b border-gray-600'>
+                    <thead className='font-zen md:font-base text-white border-b border-gray-600'>
                         <tr>
                             <th className='p-2'></th>
                             <th className='p-2'>Name</th>
