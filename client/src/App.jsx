@@ -6,9 +6,15 @@ import BeOurPartner from './pages/BeOurPartner';
 const About = lazy(() => import('./pages/About'))
 const ProjectRouter = lazy(() => import('./routes/ProjectRouter'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Login = lazy(() => import('./pages/Login'))
 import logo from '../src/assets/Images/wbcLogo.png'
 import RandomWhiteDiv from './components/whitePatch';
 import RandomStars from './components/RandomWhite';
+import { ToastContainer } from 'react-toastify';
+import ErrorBoundary from './components/ErrorBoundary';
+import ErrorPage from './components/ErrorPage';
+import ProtectedRoute from './components/ProtectedRoute';
+import InvestorDetails from './pages/InvestorDetails';
 
 
 const FallbackUI = () => <div className="preloader loaded-success fixed top-0 inset-0 bg-transparent bg-opacity-10 z-50">
@@ -27,17 +33,33 @@ const FallbackUI = () => <div className="preloader loaded-success fixed top-0 in
 
 function App() {
   return (
-    <BrowserRouter>
+      <BrowserRouter>
       <div className="body relative overflow-hidden">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Suspense fallback={<FallbackUI />}><About /></Suspense>} />
-          <Route path="/contact" element={<Suspense fallback={<FallbackUI />}><Contact /></Suspense>} />
-          <Route path="/project/*" element={<Suspense fallback={<FallbackUI />}><ProjectRouter /></Suspense>} />
-          <Route path="/partner" element={<Suspense fallback={<FallbackUI />}><BeOurPartner /></Suspense>} />
+        <Route path="/" element={<Home />} />
+          <Route path="/about" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><About /></Suspense></ErrorBoundary>} />
+          <Route path="/contact" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><Contact /></Suspense></ErrorBoundary>} />
+          <Route path="/project/*" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><ProjectRouter /></Suspense></ErrorBoundary>} />
+          <Route path="/partner" element={<ProtectedRoute><ErrorBoundary><Suspense fallback={<FallbackUI />}><BeOurPartner /></Suspense></ErrorBoundary></ProtectedRoute>} />
+          <Route path="/login" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><Login /></Suspense></ErrorBoundary>} />
+          <Route path="/investor-details" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><InvestorDetails /></Suspense></ErrorBoundary>} />
+          <Route path='*' element={<ErrorPage/>} />
         </Routes>
-        <RandomWhiteDiv/>
-        <RandomStars/>
+        <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        limit={3}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+        {/* <RandomWhiteDiv/>
+        <RandomStars/> */}
       </div>
     </BrowserRouter>
   );

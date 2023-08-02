@@ -11,7 +11,7 @@ import AdComponent from '../../components/AdComponent'
 function WbcCoin() {
   return (
     <div>
-      <Navbar />
+      <Navbar active={2}/>
       <Slider />
       <ProgressBar />
       <CoinFlow />

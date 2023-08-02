@@ -6,7 +6,7 @@ import img2 from '../../assets/Images/projectimg2.png'
 function EduTech() {
   return (
     <>
-   <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+   <ProjectPageComponent title={'Edu Tech'} img1={img1} img2={img2}/>
    </>
   )
 }

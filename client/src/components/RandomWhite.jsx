@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-function RandomStars() {
-    const numberOfDivs = 25; // Adjust the number of divs as per your requirement
+function RandomStars({num}) {
+    const numberOfDivs =num ; // Adjust the number of divs as per your requirement
 
     const generateRandomPosition = () => {
         // Generate random x and y coordinates between 0 and 100
@@ -25,4 +25,4 @@ function RandomStars() {
   )
 }
 
-export default RandomStars
+export default memo(RandomStars)

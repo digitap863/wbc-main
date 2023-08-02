@@ -4,6 +4,8 @@ import Slider from '../components/Slider'
 import Navbar from '../components/Navbar'
 import WorldMapComponent from '../components/WorldMapComponent'
 import Footer from '../components/Footer'
+import RandomStars from '../components/RandomWhite';
+import RandomWhiteDiv from '../components/whitePatch';
 
 function Contact() {
     return (
@@ -36,6 +38,8 @@ function Contact() {
             </div>
             <WorldMapComponent />
             <Footer />
+            <RandomStars num={13} />
+            <RandomWhiteDiv num={9} />
         </div>
     )
 }

@@ -7,7 +7,7 @@ import img2 from '../../assets/Images/kitchen2.png'
 function ModularKitchen() {
   return (
     <>
-    <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+    <ProjectPageComponent title={'Modular Kitchen'} img1={img1} img2={img2}/>
     </>
   )
 }

@@ -6,7 +6,7 @@ import img2 from '../../assets/Images/shirt2.png'
 function SeefShirt() {
   return (
     <>
-    <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+    <ProjectPageComponent title={'Seef Shirt'} img1={img1} img2={img2}/>
     </>
   )
 }

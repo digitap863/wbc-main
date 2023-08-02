@@ -4,7 +4,6 @@ import Chart from './Chart';
 function CryptoTable() {
     const [currencies, setCurrencies] = useState([])
     useEffect(() => {
-        console.log('called');
         const fetchData = async () => {
             try {
                 //url for fetching fata from api

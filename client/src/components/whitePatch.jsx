@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
-const RandomWhiteDiv = () => {
-    const numberOfDivs = 25; // Adjust the number of divs as per your requirement
+const RandomWhiteDiv = ({num}) => {
+    const numberOfDivs = num; // Adjust the number of divs as per your requirement
 
     const generateRandomPosition = () => {
         // Generate random x and y coordinates between 0 and 100
@@ -26,4 +26,4 @@ const RandomWhiteDiv = () => {
     );
 };
 
-export default RandomWhiteDiv;
+export default memo(RandomWhiteDiv);

@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import CryptoTable from '../components/cryptoTable'
 import InvestorSwiper from '../components/InvestorSwiper'
 import InvestmentFlow from '../components/InvestmentFlow'
+import RandomStars from '../components/RandomWhite';
+import RandomWhiteDiv from '../components/whitePatch';
 
 function Home() {
   return (
@@ -47,6 +49,8 @@ function Home() {
       <InvestmentFlow/>
       <CryptoTable />
       <Footer />
+      <RandomStars num={18} />
+      <RandomWhiteDiv num={11} />
     </div>
   )
 }

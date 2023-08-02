@@ -6,7 +6,7 @@ import img2 from '../../assets/Images/nftbox.png'
 function NftProject() {
   return (
     <>
-    <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+    <ProjectPageComponent title={'NFT'} img1={img1} img2={img2}/>
     </>
   )
 }

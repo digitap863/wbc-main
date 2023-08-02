@@ -8,6 +8,8 @@ import CryptoTable from '../components/cryptoTable'
 import WorldMapComponent from '../components/WorldMapComponent'
 import ReturnsComponent from '../components/ReturnsComponent'
 import CoreTeam from '../components/CoreTeam'
+import RandomStars from '../components/RandomWhite';
+import RandomWhiteDiv from '../components/whitePatch';
 
 function About() {
   return (
@@ -33,6 +35,8 @@ function About() {
       <ReturnsComponent/>
       <CoreTeam/>
       <Footer />
+      <RandomStars num={15} />
+      <RandomWhiteDiv num={10} />
     </div>
   )
 }

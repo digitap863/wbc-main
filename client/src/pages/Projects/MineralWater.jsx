@@ -6,7 +6,7 @@ import img2 from '../../assets/Images/projectimg7.png'
 function MineralWater() {
   return (
     <>
-    <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+    <ProjectPageComponent title={'Mineral Water'} img1={img1} img2={img2}/>
     </>
   )
 }

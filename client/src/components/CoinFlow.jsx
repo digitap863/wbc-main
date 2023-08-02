@@ -16,7 +16,7 @@ function CoinFlow() {
                         <div className='w-[18rem] relative md:w-[24rem] bg-[#080b2d] h-[9.5rem] py-3 rounded-lg borde px-4'>
                             <p className='text-center text-white md:text-base text-xs'>WBC</p>
                             <h3 className='font-zen text-white md:text-xl my-2'>Crypto Based Web App</h3>
-                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>WBC is introducing a crypto-based website to earn Seef Coins.</p>px
+                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>WBC is introducing a crypto-based website to earn Seef Coins.</p>
                         </div>
                     </div>
                     <div className='relative md:ml-36 h-[9.5rem] group md:mt-28 mt-10'>
@@ -24,7 +24,7 @@ function CoinFlow() {
                         <div className='w-[18rem] relative md:w-[24rem] bg-[#080b2d] h-[9.5rem] flex flex-col justify-center py-3 rounded-lg borde px-4'>
                             <p className='text-center text-white md:text-base text-xs'>WBC</p>
                             <h3 className='font-zen text-white md:text-xl my-2'>Website Registration</h3>
-                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>Experience the crypto revolution with our web registration at  220 USD/Year for subscription. Join now and earn Seef Coins through our innovative crypto-based website.</p>px
+                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>Experience the crypto revolution with our web registration at  220 USD/Year for subscription. Join now and earn Seef Coins through our innovative crypto-based website.</p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ function CoinFlow() {
                         <div className='w-[18rem] relative md:w-[24rem] h-[9.5rem] flex flex-col justify-center bg-[#080b2d] py-3 rounded-lg borde px-4'>
                             <p className='text-center text-white md:text-base text-xs'>WBC</p>
                             <h3 className='font-zen text-white md:text-xl my-2'>Subscription Benifits</h3>
-                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>By subscribing to our service, you'll gain access to a host of exclusive benefits</p>px
+                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>By subscribing to our service, you'll gain access to a host of exclusive benefits</p>
                         </div>
                     </div>
                     <div className='relative md:ml-36 h-[9.5rem] group md:mt-28 mt-10'>
@@ -51,7 +51,7 @@ function CoinFlow() {
                         <div className='w-[18rem] relative md:w-[24rem] h-[9.5rem] flex flex-col justify-center bg-[#080b2d] py-3 rounded-lg borde px-4'>
                             <p className='text-center text-white md:text-base text-xs'>WBC</p>
                             <h3 className='font-zen text-white md:text-xl my-2'>Weekly 2 AD Videos</h3>
-                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>Watch 2 ads weekly on our website and earn 7 Seef Coins per video</p>px
+                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>Watch 2 ads weekly on our website and earn 7 Seef Coins per video</p>
                         </div>
                     </div>
                     <div className='relative md:ml-36 h-[9.5rem] group md:mt-28 mt-10'>
@@ -59,7 +59,7 @@ function CoinFlow() {
                         <div className='w-[18rem] relative md:w-[24rem] h-[9.5rem] bg-[#080b2d] py-3 rounded-lg borde px-4'>
                             <p className='text-center text-white md:text-base text-xs'>WBC</p>
                             <h3 className='font-zen text-white md:text-xl my-2'>728 Coin Earned / Year </h3>
-                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>So, you would earn a total of 728 Seef Coins per year by watching 2 ads weekly on the website.</p>px
+                            <p className='font-mont text-white md:text-xs text-[11px] font-semibold'>So, you would earn a total of 728 Seef Coins per year by watching 2 ads weekly on the website.</p>
                         </div>
                     </div>
                 </div>

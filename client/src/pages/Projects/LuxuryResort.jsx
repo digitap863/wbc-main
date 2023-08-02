@@ -6,7 +6,7 @@ import ProjectPageComponent from '../../components/ProjectPageComponent'
 function LuxuryResort() {
   return (
     <>
-    <ProjectPageComponent title={'Crypto Exchange'} img1={img1} img2={img2}/>
+    <ProjectPageComponent title={'Luxury Resort'} img1={img1} img2={img2}/>
     </>
   )
 }

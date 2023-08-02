@@ -12,6 +12,8 @@ const RealEstate = lazy(()=>import('../pages/Projects/RealEstate'))
 const WbcCoin = lazy(()=>import('../pages/Projects/WbcCoin'))
 const SeefShirt = lazy(()=>import('../pages/Projects/SeefShirt'))
 import logo from '../assets/Images/wbcLogo.png'
+import RandomStars from '../components/RandomWhite';
+import RandomWhiteDiv from '../components/whitePatch';
 
 
 const FallbackUI = () => 
@@ -30,7 +32,8 @@ const FallbackUI = () =>
 
 function ProjectRouter() {
   return (
-    <Routes>
+   <div>
+     <Routes>
       <Route path="/" element={<Suspense fallback={<FallbackUI />}><Project /></Suspense>} />
       <Route path="/crypto-exchange" element={<Suspense fallback={<FallbackUI />}><CryptoProject /></Suspense>} />
       <Route path="/edu-tech" element={<Suspense fallback={<FallbackUI />}><EduTech /></Suspense>} />
@@ -42,6 +45,9 @@ function ProjectRouter() {
       <Route path="/wbc-coin" element={<Suspense fallback={<FallbackUI />}><WbcCoin /></Suspense>} />
       <Route path="/seef-shirt" element={<Suspense fallback={<FallbackUI />}><SeefShirt /></Suspense>} />
     </Routes>
+    <RandomStars num={10} />
+     <RandomWhiteDiv num={10} />
+   </div>
   );
 }
 
