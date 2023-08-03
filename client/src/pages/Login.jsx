@@ -58,8 +58,8 @@ function Login() {
                        </div>
                     )}
                         <div className='absolute flex flex-col -inset-1 animate-pulse opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt'>
-                            <div className='h-1/2 bg-gradient-to-t rounded-3xl from-[#080B2A] to-pink-500'></div>
-                            <div className='h-1/2 bg-gradient-to-b rounded-3xl from-[#080B2A] to-pink-500'></div>
+                            <div className='h-1/2 bg-gradient-to-t rounded-3xl  from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
+                            <div className='h-1/2 bg-gradient-to-b rounded-3xl  from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                         </div>
                     <div className='relative flex flex-col bg-[#080B2A] p-3 md:p-10 rounded-3xl'>
                         <p className='text-sky-500 md:text-base text-sm font-mont font-semibold'>Hello there, haven’t we seen you before</p>

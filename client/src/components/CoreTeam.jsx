@@ -42,7 +42,7 @@ function CoreTeam() {
             >
                   <SwiperSlide>
                   <div className='relative group md:mx-3'>
-                    <div className="absolute h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
                         <div className='bg-[#060b46] px-5 py-2 rounded-b-xl w-full'>
@@ -60,7 +60,7 @@ function CoreTeam() {
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 
@@ -79,7 +79,7 @@ function CoreTeam() {
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 
@@ -98,7 +98,7 @@ function CoreTeam() {
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 
@@ -120,7 +120,7 @@ function CoreTeam() {
             </div>
             {/* <div className='flex'>
                 <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 
@@ -137,7 +137,7 @@ function CoreTeam() {
                     </div>
                 </div>
                 <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 
@@ -154,7 +154,7 @@ function CoreTeam() {
                     </div>
                 </div>
                 <div className='relative group md:mx-3'>
-                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-b to-[#080B2A] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="absolute  h-[17rem] -inset-[3.0px] bg-gradient-to-t from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                     <div className='relative flex  bg-[#080B2A] flex-col rounded-lg mt-1 items-center'>
                         <img src={chairman} className='w-48 h-[15.5rem]' alt="team" />
 

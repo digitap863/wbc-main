@@ -10,3 +10,8 @@
   .animate-spin-slow {
     animation: spin-slow 4s linear infinite; /* Adjust the duration as per your preference */
   }
+  .stroke-text {
+    -webkit-text-fill-color: transparent; /* Hide the text color */
+    -webkit-text-stroke-width: 0.1px; /* Set the stroke width */
+    -webkit-text-stroke-color: #9c9c9c; /* Set the stroke color */
+  }

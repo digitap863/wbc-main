@@ -44,7 +44,7 @@ export default function MapChart() {
   }, []);
 
   return (
-    <ComposableMap className="md:mt-[-30px] w-[70%] h-full md:mb-[-100px] mb-[-50px]">
+    <ComposableMap className="md:mt-[-10px] w-[70%] h-full md:mb-[-100px] mb-[-50px]">
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo) => (

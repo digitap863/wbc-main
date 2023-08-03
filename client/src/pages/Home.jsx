@@ -16,8 +16,8 @@ function Home() {
       <Navbar active={0} />
       <Slider />
       <AboutF />
-      <div className='relative group mx-4 md:mx-16 mt-10'>
-        <div className="absolute -inset-1 bg-gradient-to-r from-[#080B2A]  to-purple-600 rounded-lg opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+      <div className='relative group mx-4 md:mx-16 mt-28'>
+        <div className="absolute -inset-1 bg-gradient-to-r from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         <div className='relative flex  bg-[#080B2A] p-5 md:flex-row flex-col rounded-lg'>
           <div className='flex flex-col  md:w-[40%]'>
             <p className='uppercase text-[#C004DE] font-zen text-sm'>our target</p>
@@ -32,10 +32,11 @@ function Home() {
           </div>
         </div>
       </div>
+      <InvestmentFlow/>
       <InvestorSwiper />
       <WorldMapComponent />
       <div className='relative group mx-5 md:mx-16 mt-12'>
-        <div className="absolute -inset-[3px] bg-gradient-to-r from-[#080B2A]  to-purple-500 rounded-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+        <div className="absolute -inset-[3px] bg-gradient-to-r from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         <div className='relative flex  bg-[#080B2A] p-5 md:flex-row flex-col rounded-lg'>
           <div className='flex flex-col  md:w-[30%]'>
             <p className='uppercase text-[#C004DE] font-zen text-sm'>join wbc</p>
@@ -46,7 +47,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <InvestmentFlow/>
       <CryptoTable />
       <Footer />
       <RandomStars num={18} />

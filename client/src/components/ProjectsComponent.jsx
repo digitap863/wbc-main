@@ -67,7 +67,7 @@ function ProjectsComponent() {
         <div className='mt-12 grid md:grid-cols-3 grid-cols-2 '>
             {projects.map((elem)=>(
             <div className='relative mx-4 group my-7' key={elem.title}>
-                <div className='absolute bg-gradient-to-b from-[#080B2A] to-pink-500 -inset-[3px] rounded-xl group-hover:blur'></div>
+                <div className='absolute bg-gradient-to-b  from-[#080B2A] via-[#15bffd] to-[#9C37FD] -inset-[3px] rounded-xl group-hover:blur'></div>
                 <div className='relative bg-[#080B2A] flex flex-col items-center p-5 rounded-xl'>
                     <img src={elem.img} alt="" className='w-52 h-52 object-cover mb-5'/>
                     <GradButton width={'w-40'} text={elem.title} handler={()=>navigate(elem.method)}/>

@@ -7,14 +7,13 @@ const About = lazy(() => import('./pages/About'))
 const ProjectRouter = lazy(() => import('./routes/ProjectRouter'))
 const Contact = lazy(() => import('./pages/Contact'))
 const Login = lazy(() => import('./pages/Login'))
+const InvestorDetails = lazy(() => import('./pages/InvestorDetails'))
 import logo from '../src/assets/Images/wbcLogo.png'
-import RandomWhiteDiv from './components/whitePatch';
-import RandomStars from './components/RandomWhite';
 import { ToastContainer } from 'react-toastify';
 import ErrorBoundary from './components/ErrorBoundary';
 import ErrorPage from './components/ErrorPage';
 import ProtectedRoute from './components/ProtectedRoute';
-import InvestorDetails from './pages/InvestorDetails';
+import ScrollToTopOnNavigate from './components/AutoScroll';
 
 
 const FallbackUI = () => <div className="preloader loaded-success fixed top-0 inset-0 bg-transparent bg-opacity-10 z-50">
@@ -35,6 +34,7 @@ function App() {
   return (
       <BrowserRouter>
       <div className="body relative overflow-hidden">
+          <ScrollToTopOnNavigate/>
         <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/about" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><About /></Suspense></ErrorBoundary>} />

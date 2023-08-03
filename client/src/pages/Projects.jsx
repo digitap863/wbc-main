@@ -12,7 +12,7 @@ function Projects() {
       <Slider />
       <ProjectsComponent />
       <div className='relative group mx-3 md:mx-16 mt-20 mb-10'>
-        <div className="absolute -inset-1 bg-gradient-to-r from-[#080B2A]  to-pink-500 rounded-3xl opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r  from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-3xl opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         <div className='relative flex md:flex-row flex-col bg-[#080B2A] p-5 rounded-3xl'>
           <div className='flex flex-col  md:w-[40%]'>
             <p className='uppercase text-[#C004DE] font-zen text-sm'>our future</p>
