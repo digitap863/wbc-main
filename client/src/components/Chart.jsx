@@ -19,7 +19,12 @@ function Chart({ sparkline, priceChange }) {
   });
 
   function chartColor(priceChange) {
-    return priceChange <= 0 ? '#ff3131' : '#25df3e';
+    if(priceChange=='text-green-500'){
+      return '#25df3e'
+    }else{
+      return '#ff3131'
+    }
+    // return priceChange <= 0 ? '#ff3131' : '#25df3e';
   }
 
   return (

@@ -37,8 +37,9 @@ function CryptoTable() {
     fetchData();
   }, []);
 
-  function priceColor(price) {
-    if (price >= 0) {
+  function priceColor(price,price2015) {
+
+    if (price >= price2015) {
       return 'text-green-500';
     } else {
       return 'text-red-500';
@@ -46,34 +47,33 @@ function CryptoTable() {
   }
 
   return (
-    <div className='relative group mx-3 md:mx-16 md:mt-24 mt-20'>
-      <div className="absolute -inset-0.5 bg-gradient-to-b from-[#080B2A] via-[#15bffd] to-purple-500 rounded-lg  opacity-75 group-hover:blur-xl transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+    <div className='relative group mx-3 md:mx-16 md:mt-24 mt-5'>
+      <div className="absolute -inset-0.5 bg-gradient-to-b from-[#080B2A] via-[#15bffd] to-purple-500 rounded-lg  opacity-75 group-hover:blur-md transition duration-1000 group-hover:duration-200 animate-tilt"></div>
       <div className='relative flex bg-[#080B2A] p-2 rounded-lg overflow-x-auto'>
-        <div className='relative border flex bg-[#080B2A] p-2 border-gray-600 rounded-lg w-full'>
-          <table className='w-full rounded-lg order'>
-            <thead className='font-zen md:font-base text-white border-b border-gray-600'>
+        <div className='relative border flex bg-[#080B2A] p-2 border-gray-600 rounded-lg md:w-full'>
+          <table className='md:w-full w-[500px] rounded-lg order'>
+            <thead className='font-zen md:text-base text-[10px] text-white border-b border-gray-600'>
               <tr>
-                <th className='p-2'></th>
-                <th className='p-2'>Name</th>
-                <th className='p-2'>Price - 2015/17</th>
-                <th className='p-2'>Price - 2023</th>
-                <th className='p-2'>Growth Chart</th>
+                <th className='p-2 md:w-24 w-40'></th>
+                <th className='p-2 md:w-auto w-40 text-left'>Name</th>
+                <th className='p-2 md:w-auto w-40'>Price - 2015/17</th>
+                <th className='p-2 md:w-auto w-40'>Price - 2023</th>
+                <th className='p-2 md:w-auto w-40'>Growth Chart</th>
               </tr>
             </thead>
             <tbody className='font-space'>
               {currencies.map((elem, index) => (
                 <tr key={elem.name} className='text-white text-center'>
-                  <td className='p-2'>{index + 1}</td>
-                  <td className='p-2 flex items-center'>
-                    <img src={elem.image} alt="" className='w-8 mr-5' />
+                  <td className='p-2  md:text-base text-xs w-20 md:w-24'><img src={elem.image} alt="" className='w-8 mr-5' /></td>
+                  <td className='p-2md:w-auto text-left w-40 md:text-base text-xs'>
                     {elem.name}
                   </td>
-                  <td className='p-2'>₹ {elem.price_2015_17}</td> {/* Display "Price - 2015/17" */}
-                  <td className={`p-2 ${priceColor(elem.price_change_percentage_7d_in_currency)}`}>
+                  <td className='p-2 md:text-base md:w-auto w-40 text-xs'>₹ {elem.price_2015_17}</td> {/* Display "Price - 2015/17" */}
+                  <td className={`p-2  md:text-base text-xs ${priceColor(elem.current_price,elem.price_2015_17)}`}>
                     ₹ {elem.current_price}
                   </td>
-                  <td className='p-2 w-10'>
-                    <Chart sparkline={elem.sparkline_in_7d} priceChange={elem.price_change_percentage_7d_in_currency} />
+                  <td className='p-2 w-10 md:text-base text-xs'>
+                    <Chart sparkline={elem.sparkline_in_7d} priceChange={priceColor(elem.current_price,elem.price_2015_17)} />
                   </td>
                 </tr>
               ))}

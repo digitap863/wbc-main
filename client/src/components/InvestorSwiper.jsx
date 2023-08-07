@@ -45,13 +45,13 @@ function InvestorSwiper() {
         }
     ]
     return (
-        <div className='md:mx-16 mt-28 flex flex-col items-center '>
+        <div className='lg:mx-16 mt-20 flex flex-col items-center '>
             <h4 className='text-white font-zen text-2xl mb-2'>Our Investors</h4>
-            <p className='font-mont text-slate-500 font-semibold text-sm w-96 text-center'>The largest and unique Super rare WBC Community
+            <p className='font-mont text-slate-500 font-semibold text-xs md:text-sm w-60 md:w-96 text-center'>The largest and unique Super rare WBC Community
                 based on Crypto</p>
             <div className='w-full md:px-10 px-3 mt-7'>
                 <Swiper
-                    slidesPerView={2}
+                    slidesPerView={1}
                     spaceBetween={10}
                     modules={[Navigation, Scrollbar, A11y]}
                     scrollbar={{ draggable: true }}
@@ -61,7 +61,7 @@ function InvestorSwiper() {
                             spaceBetween: 20,
                         },
                         768: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             spaceBetween: 40,
                         },
                         1024: {
@@ -72,7 +72,7 @@ function InvestorSwiper() {
                 >
                     {Investors.map((elem)=>(
                         <SwiperSlide onClick={investoretails}>
-                        <div className='  bg-[#21094a50] p-3 border border-[#15bffd] rounded-lg flex flex-col'>
+                        <div className='  bg-[#21094a50] p-3 border md:mx-0 mx-8 border-[#15bffd] rounded-lg flex flex-col'>
                             <div className='flex justify-between'>
                                 <div className='ml-2'>
                                     <p className='md:text-sm font-Zen text-[11px] text-white'>Current Investment</p>
@@ -102,7 +102,7 @@ function InvestorSwiper() {
                                         <div className='w-1/2 bg-gradient-to-r rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                         <div className='w-1/2 bg-gradient-to-l rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                     </div>
-                                    <img src={InvestorImage} alt="" className='md:w-auto md:h-60 w-20 rounded-lg bg-[#21094a] relative' />
+                                    <img src={InvestorImage} alt="" className='md:w-auto h-60 md:h-60 w-40 rounded-lg bg-[#21094a] relative' />
                                 </div>
                             </div>
                             <div className='flex justify-between'>

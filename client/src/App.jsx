@@ -58,8 +58,6 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-        {/* <RandomWhiteDiv/>
-        <RandomStars/> */}
       </div>
     </BrowserRouter>
   );

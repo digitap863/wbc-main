@@ -63,14 +63,14 @@ function ProjectsComponent() {
     const navigate = useNavigate()
   return (
     <div className='flex flex-col justify-center items-center mt-20'>
-        <h1 className='text-white font-zen text-xl md:text-3xl'>Our Projects <span className='text-blue-500'>Coming Soon</span></h1>       
-        <div className='mt-12 grid md:grid-cols-3 grid-cols-2 '>
+        <h1 className='text-white font-zen text-2xl text-center md:text-3xl'>Our Projects <span className='text-blue-500'>Coming Soon</span></h1>       
+        <div className='mt-5 grid md:grid-cols-3 grid-cols-2 '>
             {projects.map((elem)=>(
             <div className='relative mx-4 group my-7' key={elem.title}>
                 <div className='absolute bg-gradient-to-b  from-[#080B2A] via-[#15bffd] to-[#9C37FD] -inset-[3px] rounded-xl group-hover:blur'></div>
-                <div className='relative bg-[#080B2A] flex flex-col items-center p-5 rounded-xl'>
-                    <img src={elem.img} alt="" className='w-52 h-52 object-cover mb-5'/>
-                    <GradButton width={'w-40'} text={elem.title} handler={()=>navigate(elem.method)}/>
+                <div className='relative bg-[#080B2A] md:h-auto h-56 flex flex-col items-center p-5 rounded-xl'>
+                    <img src={elem.img} alt="" className='w-52 h-32 md:h-52 object-cover mb-5'/>
+                    <GradButton width={'md:w-40 w-28 md:text-xs text-[8px] md:py-2 py-[4px]'} text={elem.title} handler={()=>navigate(elem.method)}/>
                 </div>
             </div>
             ))}

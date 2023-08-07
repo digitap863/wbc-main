@@ -29,8 +29,8 @@ function InvestorDetails() {
                 <div className='flex md:flex-row flex-col relative w-full items-center justify-center'>
                     <div className='relative group flex justify-center md:w-auto w-[5em] my-4'>
                         <div className="absolute -inset-[3.0px] flex group-hover:blur-lg rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt">
-                            <div className='w-1/2 bg-gradient-to-r rounded-xl to-[#080B2A] from-[#9C37FD]'></div>
-                            <div className='w-1/2 bg-gradient-to-l rounded-xl to-[#080B2A] from-[#9C37FD]'></div>
+                            <div className='w-1/2 bg-gradient-to-l rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
+                            <div className='w-1/2 bg-gradient-to-r rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                         </div>
                         <img src={InvestorImage} alt="" className='md:w-40 md:h-60 w-20 rounded-lg bg-[#21094a] relative' />
                     </div>
@@ -61,9 +61,9 @@ function InvestorDetails() {
                         <img src={adhaar} className='w-60' alt="" />
                     </div>
                     <div className='relative md:w-[60%] items-center flex flex-col justify-center md:ml-20'>
-                        <p className='text-white w-full ml-28 font-zen my-2'>Total Invested</p>
+                        <p className='text-white w-full font-zen text-center my-2'>Total Invested</p>
                         <div className='border p-3 mt-4 md:mt-0 md:p-6 border-gray-700 rounded '>
-                            <p className='font-zen md:text-2xl text-xl bg-gradient-to-r from-purple-500 to-pink-500  text-transparent bg-clip-text'>INR 10,00,00,000 /-</p>
+                            <p className='font-zen md:text-2xl text-xl bg-gradient-to-r from-purple-500 to-pink-500  text-transparent bg-clip-text'>INR 1,00,000 /-</p>
                         </div>
                     </div>
                 </div>

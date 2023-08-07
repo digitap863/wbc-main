@@ -8,7 +8,7 @@ const ProgressBar = ({ percentage }) => {
                 <div className="border border-r-0 h-8"></div>
             </div>
             <div
-                className="h-full text-right  rounded-lg px-10 leading-22 bg-gradient-to-r font-space text-white from-pink-600 to-purple-800"
+                className="h-full text-right  rounded-lg px-10 leading-22 bg-gradient-to-l font-space text-white from-[#080B2A] via-[#15bffd] to-[#9C37FD]"
                 style={{ width: `${percentage}%` }}
             >
                 {percentage}%
@@ -85,7 +85,7 @@ const Countdown = () => {
     }, []);
 
     return (
-        <div className="flex flex-col mx-2 md:mx-16 items-center justify-center">
+        <div className="flex flex-col mx-2 md:mx-16 items-center justify-center mt-20">
             <h1 className='text-white font-zen text-center text-xl md:text-3xl'>Seef Coin <span className='text-blue-500'>Coming Soon</span></h1>
             <div className="flex items-center">
                 <div className="md:m-4">
@@ -117,7 +117,7 @@ const Countdown = () => {
                 </div>
             </div>
             <div className="w-full text-sm flex flex-col justify-center items-center">
-                <div className="text-sky-500 md:text-base text-xs w-[80%] font-mont font-extrabold uppercase flex justify-between m-3 md:w-[45%]">
+                <div className="text-sky-500 md:text-base text-xs w-[80%] font-mont font-extrabold flex justify-between m-3 md:w-[45%]">
                     <p>Seef Coins</p>
                     <p>Total Coins</p>
                 </div>

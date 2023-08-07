@@ -12,9 +12,9 @@ function Contact() {
         <div>
             <Navbar active={4} />
             <Slider />
-            <div className='md:mx-20 mb-12 mx-3 flex md:flex-row flex-col'>
+            <div className='md:mx-20 mb-12 mx-3 md:items-center flex lg:flex-row flex-col'>
                 <div>
-                    <img src={image} alt="" className='w-[490px] md:m-0 mb-5' />
+                    <img src={image} alt="" className='w-[490px] lg:m-0 mb-5' />
                 </div>
                 <div className='text-white font-zen text-xs'>
                     <div className='flex md:flex-row flex-col'>

@@ -4,21 +4,21 @@ import GradButton from './GradButton'
 
 function Slider() {
     return (
-        <div className='md:mt-20 my-10 mx-5 md:mx- flex md:flex-row flex-col'>
+        <div className='md:mt-20 my-10 mx-5  md:mx- flex md:flex-row flex-col'>
             <div className='md:w-[50%] flex flex-col text-left items-center md:items-sart'>
                 <h1 className='font-bold md:text-6xl text-4xl md:w-[70%] w-60 text-center md:text-left  text-white font-zen'>
-                    Join <span className='stroke-text'>WBC</span> Business Network
+                    Join <span className='md:stroke-text stroke-textm'>WBC</span> Business Network
                 </h1>
-                <p className='md:w-[24rem] md:-ml-10 font-semibold text-slate-600 my-1 font-mont mb-6 text-xs'>Outcome-centered products that reduce churn, optimize pricincg, and grow your subscription business end-to-end</p>
+                <p className='lg:w-[26rem] md:-ml-10 font-semibold text-slate-600 my-1 font-mont mb-6 text-xs w-60 text-center'>The largest and unique Super rare WBC Community based on Crypto</p>
                 <div className='md:flex justify-start w-[70%] hidden'>
                     <GradButton text={'Join Now'} handler={() => { alert() }} width={'w-28'} />
                 </div>
-                <div className='border group relative md:w-[70%] mt-5 border-violet-700 rounded-md md:block hidden'>
-                    <div className='absolute group-hover:blur-xl bg-gradient-to-r rounded-lg from-[#080B2A]  via-[#15bffd] to-purple-500 -inset-0.5'></div>
+                <div className='border group relative lg:w-[70%] mt-5 border-violet-700 rounded-md md:block hidden md:w-[90%]'>
+                    <div className='absolute group-hover:blur-sm bg-gradient-to-r rounded-lg from-[#080B2A]  via-[#15bffd] to-purple-500 -inset-0.5'></div>
                     <div className='relative bg-[#080B2A] p-5 rounded-lg'>
                         <p className='text-slate-300 font-zen text-sm'>WE ARE TARGETING</p>
                         <div className='border p-2 border-gray-800 rounded-lg'>
-                            <h3 className='font-zen bg-gradient-to-r from-purple-500 to-blue-500 text-transparent text-2xl bg-clip-text'>INR 10,00,00,000/-</h3>
+                            <h3 className='font-zen bg-gradient-to-r from-purple-500 to-blue-500 text-transparent md:text-xl lg:text-2xl bg-clip-text'>INR 10,00,00,000/-</h3>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ function Slider() {
                     <div className='relative bg-[#080B2A] p-5 rounded-lg'>
                         <p className='text-slate-300 font-zen text-sm'>WE ARE TARGETING</p>
                         <div className='border p-2 border-gray-800 rounded-lg'>
-                            <h3 className='font-zen bg-gradient-to-r from-purple-500 to-blue-500 text-transparent text-2xl bg-clip-text'>INR 10,00,00,000/-</h3>
+                            <h3 className='font-zen bg-gradient-to-r from-purple-500 to-blue-500 text-transparent text-xl md:text-2xl bg-clip-text'>INR 10,00,00,000/-</h3>
                         </div>
                     </div>
                 </div>
