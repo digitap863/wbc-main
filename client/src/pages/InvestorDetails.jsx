@@ -10,8 +10,8 @@ import RandomWhiteDiv from '../components/whitePatch';
 
 function InvestorDetails() {
     const user = {
-        name:'Ashkar Ali',
-        email:"ashkarali@gmail.com",
+        name:'James Cooper',
+        email:"jamescooper@gmail.com",
         number:1234567890,
         dob:'01/07/2000',
         city:'ernakulam',
@@ -28,7 +28,7 @@ function InvestorDetails() {
                 <p className='font-zen text-white text-xl my-5'>Investor Details</p>
                 <div className='flex md:flex-row flex-col relative w-full items-center justify-center'>
                     <div className='relative group flex justify-center md:w-auto w-[5em] my-4'>
-                        <div className="absolute -inset-[3.0px] flex group-hover:blur-lg rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt">
+                        <div className="absolute -inset-[2.50px] flex group-hover:blur-sm rounded-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt">
                             <div className='w-1/2 bg-gradient-to-l rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                             <div className='w-1/2 bg-gradient-to-r rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                         </div>

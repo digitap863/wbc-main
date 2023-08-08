@@ -30,37 +30,54 @@ function AdComponent() {
             options: ['Leonardo da Vinci', 'Vincent van Gogh', 'Pablo Picasso', 'Michelangelo'],
             correctAnswer: 'Leonardo da Vinci',
           },
-        // Add more questions here
     ];
+
+    const showRandomQuestion = () => {
+        const randomIndex = Math.floor(Math.random() * questionsData.length);
+        const randomQuestion = questionsData[randomIndex];
+        setQuestion(randomQuestion.question);
+        setOptions(randomQuestion.options);
+        setCorrectAnswer(randomQuestion.correctAnswer);
+        setShowQuestion(true);
+        // Pause the video when the question is shown
+        videoRef.current.pause();
+    };
+    function call(r){
+        const intervasl = setTimeout(() => {
+            r();
+        }, 10000);
+    }
 
     useEffect(() => {
         // Function to show a random question and its options
-        const showRandomQuestion = () => {
-            const randomIndex = Math.floor(Math.random() * questionsData.length);
-            const randomQuestion = questionsData[randomIndex];
-            setQuestion(randomQuestion.question);
-            setOptions(randomQuestion.options);
-            setCorrectAnswer(randomQuestion.correctAnswer);
-            setShowQuestion(true);
-            // Pause the video when the question is shown
-            videoRef.current.pause();
-        };
+        // const showRandomQuestion = () => {
+        //     const randomIndex = Math.floor(Math.random() * questionsData.length);
+        //     const randomQuestion = questionsData[randomIndex];
+        //     setQuestion(randomQuestion.question);
+        //     setOptions(randomQuestion.options);
+        //     setCorrectAnswer(randomQuestion.correctAnswer);
+        //     setShowQuestion(true);
+        //     // Pause the video when the question is shown
+        //     videoRef.current.pause();
+        // };
 
         // Show the first question when the component mounts
-        // showRandomQuestion();
 
         // Set up the interval to show a new question every 3 seconds
-        const interval = setInterval(() => {
-            showRandomQuestion();
-        }, 8000);
+        // const interval = setInterval(() => {
+        //     showRandomQuestion();
+        // }, 10000);
+        call(showRandomQuestion)
 
         // Clean up the interval when the component is unmounted
-        return () => clearInterval(interval);
+        // return () => clearInterval(interval);
     }, []);
+
 
     const handleOptionClick = (option) => {
         if (option === correctAnswer) {
             setShowQuestion(false);
+            call(showRandomQuestion)
             // return () => clearInterval(interval);
             // Resume the video if the user picks the correct option
             videoRef.current.play();
@@ -106,7 +123,7 @@ function AdComponent() {
                                             <button
                                                 key={index}
                                                 onClick={() => handleOptionClick(option)}
-                                                className='px-4 py-2 rounded-md m-2 bg-gray-500 hover:bg-gray-700 text-white'
+                                                className='px-4 py-2 rounded-md m-2 bg-gradient-to-r  from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'
                                             >
                                                 {option}
                                             </button>
