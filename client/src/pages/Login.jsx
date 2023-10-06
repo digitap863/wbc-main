@@ -5,33 +5,43 @@ import RandomWhiteDiv from '../components/whitePatch';
 import GradButton from '../components/GradButton';
 import logo from '../assets/Images/wbcLogo.png'
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
+import { postForm } from '../axios/apicall';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
-    const [failed,setFailed] = useState(null)
+    const [failed1,setFailed1] = useState(null)
+    const [failed2,setFailed2] = useState(null)
     const navigate = useNavigate()
     const handleLogin = () => {
-        // Replace with your hardcoded dummy email and password
-        const dummyEmail = 'wbc.mail@gmail.com';
-        const dummyPassword = 'admin123';
+        if(!email){
+            setFailed1('border-red-500')
+            toast.warn('email is required')
+            return
+        }
+        if(!password){
+            setFailed2('border-red-500')
+            toast.warn('enter a password')
+            return
+        }
+       
+      if(email && password){
         setLoading(true);
-
-        // Simulating an API call with setTimeout
-        setTimeout(() => {
-            if (email === dummyEmail && password === dummyPassword) {
-                // Successful login
-                localStorage.setItem('loggedIn', 'true'); // Store a key-value in local storage
-                toast.success('login success')
-                navigate('/partner')
-            } else {
-                setFailed('border-red-500 bg-red-500 bg-opacity-30')
-                toast.warning('Invalid email or password');
-            }
+        postForm('/login',{email,password}).then((res)=>{
+            console.log(res.data);
             setLoading(false);
-        }, 1500);
+            if(res.data.success){
+                toast.success("login succesfull")
+                localStorage.setItem("loggedIn",res.data.token)
+                setLoading(false);
+                navigate('/')
+              }else{
+                toast.error(res.data.message)
+              }
+        })
+      }
     };
 
     return (
@@ -70,10 +80,10 @@ function Login() {
                             type='text'
                             name='email'
                             id='email'
-                            className={`mb-2 border-purple-500 rounded-md bg-gray-800 opacity-75 py-3 text-white w-[21rem] md:w-[22rem] border ${failed} px-2`}
+                            className={`mb-2 border-purple-500 rounded-md bg-gray-800 opacity-75 py-3 text-white w-[21rem] md:w-[22rem] border ${failed1} px-2`}
                             placeholder='Email'
                             value={email}
-                            onChange={(e) =>{setFailed(null)
+                            onChange={(e) =>{setFailed1(null)
                                  setEmail(e.target.value)}}
                         />
                         <label htmlFor='password' className='font-zen my-1 text-slate-400 font-semibold'>
@@ -83,7 +93,7 @@ function Login() {
                             type='password'
                             name='password'
                             id='password'
-                            className={`border-purple-500 rounded-md bg-gray-800 opacity-75 mb-5 py-3 text-white w-[21rem] md:w-[22rem] border ${failed} px-2`}
+                            className={`border-purple-500 rounded-md bg-gray-800 opacity-75 mb-5 py-3 text-white w-[21rem] md:w-[22rem] border ${failed2} px-2 `}
                             placeholder='Password'
                             value={password}
                             onKeyDown={(e) => {
@@ -92,7 +102,7 @@ function Login() {
                                 }
                               }}
                             onChange={(e) =>{
-                                setFailed(null)
+                                setFailed2(null)
                                  setPassword(e.target.value)}}
                         />
                         

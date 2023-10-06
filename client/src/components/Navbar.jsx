@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/Images/wbcLogo.png'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import menu from '../assets/Images/menu.png'
 import disc from '../assets/Images/discord.png'
 import tiktok from '../assets/Images/tiktok.png'
@@ -42,6 +42,8 @@ function Navbar({ active }) {
   const check = localStorage.getItem('loggedIn')
   const [checck, setChecck] = useState(false)
   const navigate = useNavigate()
+  const location = useLocation()
+  const pathName = location.pathname
   const navItems = [
     {
       id: 0,
@@ -131,7 +133,7 @@ function Navbar({ active }) {
             localStorage.removeItem('loggedIn')
             navigate('/')
           }}><ion-icon name="log-out-outline"></ion-icon></button> :
-            <button className="border-[#15BFFD] border rounded-md text-white px-5 py-1 hover:bg-[#87acec]" onClick={() => navigate('/login')}>Login</button>}
+            pathName==='/login'?'':<button className="border-[#15BFFD] border rounded-md text-white px-5 py-1 hover:bg-[#87acec]" onClick={() => navigate('/login')}>Login</button>}
 
         </div>
       </nav>

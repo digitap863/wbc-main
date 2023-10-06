@@ -18,14 +18,14 @@ function Home() {
       <AboutF />
       <div className='relative group mx-4 md:mx-16 md:mt-28 mt-16'>
         <div className="absolute -inset-1 bg-gradient-to-r from-[#080B2A] via-[#15bffd] to-[#9C37FD] rounded-lg opacity-75  group-hover:opacity-100 group-hover:blur-sm transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-        <div className='relative flex  bg-[#080B2A] p-5 lg:flex-row flex-col rounded-lg'>
-          <div className='flex flex-col  lg:w-[40%]'>
+        <div className='relative flex  bg-[#080B2A] p-5 lg:flex-row flex-col rounded-lg justify-between'>
+          <div className='flex flex-col lg:w-[40%]'>
             <p className='uppercase text-[#C004DE] font-zen text-sm'>our target</p>
             <h5 className='uppecase text-white font-zen text-2xl'>We Are Targeting</h5>
             <br />
             <p className='font-mont text-slate-400 font-semibold text-sm'>With a minimum investment value of 1 lakh, you can be part of a promising venture that guarantees returns. We assure a minimum of 25-30% returns on your investment, giving you financial security and growth potential.</p>
           </div>
-          <div className='relative lg:w-[60%] items-center flex lg:ml-20'>
+          <div className='relative lg:w-[45%] items-center flex lg:ml-20'>
             <div className='border p-3 mt-4 lg:mt-0 md:p-6 border-gray-700 rounded '>
               <p className='font-zen md:text-4xl text-xl bg-gradient-to-r from-purple-500 to-pink-500  text-transparent bg-clip-text'>INR 10,00,00,000 /-</p>
             </div>

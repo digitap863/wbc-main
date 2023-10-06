@@ -99,7 +99,7 @@ function InvestmentFlow() {
                         </div>
                     </div>
                 </div>
-                <div className='flex lg:flex-row flex-col w-full lg:items-start items-end lg:mt-20 mt-12'>
+                <div className='flex lg:flex-row flex-col lg:items-start items-end lg:mt-20 mt-12 lg:w-[94%] 2xl:w-[80%]'>
                     <div className='relative h-[9.5rem] group'>
                         <div className="absolute -inset-[3px] bg-gradient-to-l to-[#080B2A] via-[#15bffd] from-[#9C37FD] rounded-lg opacity-75 group-hover:opacity-100 group-hover:blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                         <div className='w-[18rem] relative md:w-[24rem] h-[9.5rem] flex flex-col justify-center bg-[#080b2d] py-1.5 rounded-lg borde px-2'>

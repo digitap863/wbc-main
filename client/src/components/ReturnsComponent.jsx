@@ -4,9 +4,9 @@ import flow from '../assets/Images/returnsflow.png'
 
 function ReturnsComponent() {
     return (
-        <div className='lg:mx-32 mb-12 md:ml-16 md:mt-12 flex justify-between md:flex-row flex-col'>
+        <div className='lg:mx-32 mb-12 md:ml-16 md:mt-12 flex justify-between 2xl:justify-center 2xl:gap-32 md:flex-row flex-col'>
             <div>
-                <img src={image} alt="" className='w-[490px] md:m-0 mb-5' />
+                <img src={image} alt="" className='w-[490px] md:m-0 mb-5 2xl:w-[30rem]' />
             </div>
             <div className='relative lg:ml-10 md:ml-1 mx-20 flex flex-col justify-center md:mt-10'>
                 <img src={flow} alt="" className='h-60 -left-16 lg:top-8 absolute'/>

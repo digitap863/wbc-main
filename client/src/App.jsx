@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import './App.css'; // Import the App.css file
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home';
 import BeOurPartner from './pages/BeOurPartner';
 const About = lazy(() => import('./pages/About'))
@@ -9,7 +11,6 @@ const Contact = lazy(() => import('./pages/Contact'))
 const Login = lazy(() => import('./pages/Login'))
 const InvestorDetails = lazy(() => import('./pages/InvestorDetails'))
 import logo from '../src/assets/Images/wbcLogo.png'
-import { ToastContainer } from 'react-toastify';
 import ErrorBoundary from './components/ErrorBoundary';
 import ErrorPage from './components/ErrorPage';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -32,32 +33,36 @@ const FallbackUI = () => <div className="preloader loaded-success fixed top-0 in
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <div className="body relative overflow-hidden">
-          <ScrollToTopOnNavigate/>
+        <ScrollToTopOnNavigate />
         <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><About /></Suspense></ErrorBoundary>} />
           <Route path="/contact" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><Contact /></Suspense></ErrorBoundary>} />
           <Route path="/project/*" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><ProjectRouter /></Suspense></ErrorBoundary>} />
           <Route path="/partner" element={<ProtectedRoute><ErrorBoundary><Suspense fallback={<FallbackUI />}><BeOurPartner /></Suspense></ErrorBoundary></ProtectedRoute>} />
           <Route path="/login" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><Login /></Suspense></ErrorBoundary>} />
-          <Route path="/investor-details" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}><InvestorDetails /></Suspense></ErrorBoundary>} />
-          <Route path='*' element={<ErrorPage/>} />
+          <Route path="/investor-details" element={<ErrorBoundary><Suspense fallback={<FallbackUI />}>
+            <ProtectedRoute>
+              <InvestorDetails />
+            </ProtectedRoute>
+          </Suspense></ErrorBoundary>} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
         <ToastContainer
-        position="top-center"
-        autoClose={2000}
-        limit={3}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+          position="top-center"
+          autoClose={2000}
+          limit={3}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
       </div>
     </BrowserRouter>
   );
