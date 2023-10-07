@@ -27,33 +27,6 @@ function InvestorSwiper() {
     useEffect(() => {
         fetchInvestors()
     }, [])
-    // const Investors = [
-    //     {
-    //         name: "Irshad",
-    //         place: 'Vytila',
-    //         investment: 100000
-    //     },
-    //     {
-    //         name: "Rahul",
-    //         place: 'Kakkanad',
-    //         investment: 100000
-    //     },
-    //     {
-    //         name: "Jesbin",
-    //         place: 'Cheranallur',
-    //         investment: 100000
-    //     },
-    //     {
-    //         name: "Maha",
-    //         place: 'Trivandrum',
-    //         investment: 100000
-    //     },
-    //     {
-    //         name: "Shyam",
-    //         place: 'Ernakula,',
-    //         investment: 100000
-    //     }
-    // ]
     return (
         <div className='lg:mx-16 mt-20 flex flex-col items-center '>
             <h4 className='text-white font-zen text-2xl mb-2'>Our Investors</h4>
@@ -112,7 +85,7 @@ function InvestorSwiper() {
                                             <div className='w-1/2 bg-gradient-to-r rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                             <div className='w-1/2 bg-gradient-to-l rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                         </div>
-                                        <img src={`./src/investorImages/${elem.profileImage}`} alt="" className='md:w-56 object-cover h-60 md:h-60 w-40 rounded-lg bg-[#21094a] relative' />
+                                        <img src={`https://seefwbc.com/investorImages/${elem.profileImage}`} alt="" className='md:w-56 object-cover h-60 md:h-60 w-40 rounded-lg bg-[#21094a] relative' />
                                     </div>
                                 </div>
                                 <div className='flex justify-between'>

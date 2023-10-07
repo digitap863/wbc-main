@@ -93,7 +93,7 @@ function PartnerForm() {
             formDataToSend.append('idImage', idImage);
             formDataToSend.append('profileImage', profileImage);
 
-            postForm('/add-member', formData)
+            // postForm('/add-member', formData)
             // Make an Axios POST request to your backend API endpoint
             axios.post('/add-member', formDataToSend, {
                 headers: {
