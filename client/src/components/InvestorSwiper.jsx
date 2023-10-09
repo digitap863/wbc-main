@@ -85,7 +85,7 @@ function InvestorSwiper() {
                                             <div className='w-1/2 bg-gradient-to-r rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                             <div className='w-1/2 bg-gradient-to-l rounded-xl to-[#080B2A] via-[#15bffd] from-[#9C37FD]'></div>
                                         </div>
-                                        <img src={`https://seefwbc.com/api/uploads/${elem.profileImage}`} alt="" className='md:w-56 object-cover h-60 md:h-60 w-40 rounded-lg bg-[#21094a] relative' />
+                                        <img src={`https://seefwbc.com/api/${elem.profileImage}`} alt="" className='md:w-56 object-cover h-60 md:h-60 w-40 rounded-lg bg-[#21094a] relative' />
                                     </div>
                                 </div>
                                 <div className='flex justify-between'>
