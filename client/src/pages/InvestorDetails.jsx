@@ -35,7 +35,7 @@ function InvestorDetails() {
                             <div className='w-1/2 bg-gradient-to-l rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                             <div className='w-1/2 bg-gradient-to-r rounded-xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                         </div>
-                        <img src={`https://seefwbc.com/api/investorImages/${user.profileImage}`} alt="" className='md:w-40 md:h-60 w-20 object-cover rounded-lg bg-[#21094a] relative' />
+                        <img src={`https://seefwbc.com/api/uploads/${user.profileImage}`} alt="" className='md:w-40 md:h-60 w-20 object-cover rounded-lg bg-[#21094a] relative' />
                     </div>
                     <div className='flex flex-col md:w-[90%] lg:w-[72%]'>
                         <input type="text" name='name' className='md:mx-6 md:my-4 my-2 bg-transparent px-3  w-full md:w-[90%] lg:w-[95%] text-purple-600 font-semibold placeholder:text-gray-700 font-space  py-2 border rounded-lg border-purple-500' placeholder='FULL NAME' value={user?.fullName}/>

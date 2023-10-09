@@ -21,7 +21,7 @@ connectDB();
 //middlewares
 app.use(express.json());
 app.use(morgan("dev")); 
-app.use('/investorImages', express.static('investorImages'));
+app.use('/uploads', express.static('uploads'));
 // cors
 app.use(
   cors({
