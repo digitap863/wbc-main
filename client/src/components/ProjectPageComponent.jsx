@@ -6,14 +6,14 @@ import ComingSoon from './ComingSoon'
 import ProjectOverview from './ProjectOverview'
 import ChooseUsComponent from './ChooseUsComponent'
 
-function ProjectPageComponent({title,img1,img2}) {
+function ProjectPageComponent({title,img1,img2,content,projectContent}) {
     
   return (
     <div>
         <Navbar active={2}/>
         <Slider/>
-        <ComingSoon title={title} image={img1}/>
-        <ProjectOverview img={img2}/>
+        <ComingSoon title={title} image={img1} content={content}/>
+        <ProjectOverview img={img2} projectContent={projectContent}/>
         <ChooseUsComponent/>
         <Footer/>
     </div>
