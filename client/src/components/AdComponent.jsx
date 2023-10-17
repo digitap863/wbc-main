@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import video from '../assets/video/adVideo.mp4';
+import ty from '../assets/Images/thankyou.jpg'
 // import video from '../assets/video/videoplayback.mp4';
 
 function AdComponent() {
@@ -8,44 +9,28 @@ function AdComponent() {
     const [correctAnswer, setCorrectAnswer] = useState('');
     const [showQuestion, setShowQuestion] = useState(false);
     const [questionIndex, setQuestionIndex] = useState(0);
+    const [final, setFinal] = useState()
+    const [finalQ, setFinalQ] = useState('bg-violet-900')
+    const [answer, setAnswer] = useState('')
     const videoRef = useRef(null);
 
     // Define your questions and answers here
     const questionsData = [
         {
-            question: 'Why gold is so valuable?',
-            options: [
-                'Rare on other planets',
-                'Widely used in sandwiches',
-                'Made of unicorn tears',
-                'Limited Quantity' // Correct Answer
-            ],
-            correctAnswer: 'Limited Quantity',
+            question: 'Enter this code “2345”',
+            correctAnswer: '2345',
         },
         {
-            question: "Why can't we find more gold?",
-            options: ["harder and expensive", "Aliens Hoarding Gold", "Government Conspiracy", "Gold-Eating Bacteria"],
-            correctAnswer: 'harder and expensive',
+            question: "Enter this code 8625",
+            correctAnswer: '8625',
         },
         {
-            question: 'Which crypto currency was just mentioned in the video?',
-            options: [
-                "DogeCoin",
-                "PizzaCoin",
-                "BananaCoin",
-                "Bitcoin" // Correct Answer
-            ],
-            correctAnswer: 'Bitcoin',
+            question: 'Enter this code 7841',
+            correctAnswer: '7841',
         },
         {
-            question: 'What is the advantage of crypto transaction?',
-            options: [
-                "No middlemen", // Correct Answer
-                "Faster than light",
-                "Made of chocolate",
-                "Powered by unicorns"
-            ],
-            correctAnswer: 'No middlemen',
+            question: 'Enter this code 4633',
+            correctAnswer: '4633',
         },
     ];
 
@@ -69,13 +54,19 @@ function AdComponent() {
             r(index);
         }, 7000);
     }
-    function hideQuestion(){
+    function hideQuestion() {
         const intervasl = setTimeout(() => {
             setShowQuestion(false);
             setCorrect('bg-opacity-10 bg-white')
         }, 500);
     }
-    const [correct,setCorrect] = useState('bg-opacity-10 bg-white')
+
+    function hideQuestion2() {
+        const intervasl = setTimeout(() => {
+            setEnd(true)
+        }, 1000);
+    }
+    const [correct, setCorrect] = useState('bg-opacity-40 bg-violet-900')
 
     const handleOptionClick = (option) => {
         if (option === correctAnswer) {
@@ -83,7 +74,7 @@ function AdComponent() {
             hideQuestion();
             if (questionIndex === questionsData.length) {
                 videoRef.current.pause()
-                setEnd(true)
+                setFinal(true)
                 return
             }
             call(showRandomQuestion, questionIndex)
@@ -117,7 +108,7 @@ function AdComponent() {
     };
     const [btnVisiblity, setbtnVisiblity] = useState('block')
     return (
-        <div className='lg:mx-40 mx-3 my-16'>
+        <div className='lg:mx-40 mx-3 mt-16 mb-36'>
             <div className='relative group md:mx-20 mt-20 mb-10'>
                 <div className="absolute flex -inset-[3px] animate-pulse  opacity-75 group-hover:opacity-100 group-hover:blur-sm transition duration-1000 group-hover:duration-200 animate-tilt">
                     <div className='w-1/2 bg-gradient-to-l rounded-3xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
@@ -137,36 +128,69 @@ function AdComponent() {
                     <div className='w-1/2 bg-gradient-to-r rounded-3xl from-[#080B2A] via-[#15bffd] to-[#9C37FD]'></div>
                 </div>
                 <div className='relative bg-[#080B2A] rounded-3xl'>
-                    <div className='bg-white w-full md:p-5 p-3 rounded-3xl flex pb-40 md:pb-0 lg:h-[25rem] justify-center items-center flex-col bg-opacity-5'>
+                    <div className={`bg-white w-full md:p-5 p-3 rounded-3xl flex ${final?'pb-0':'pb-40'} md:pb-0 lg:h-[25rem] justify-center items-center flex-col bg-opacity-5`}>
                         {/* <video ref={videoRef} src={video}  muted loop className='rounded-lg' onMouseEnter={()=>setbtnVisiblity('block')} onMouseLeave={()=>setbtnVisiblity('hidden')}>
                             Your browser does not support the video tag.
                         </video> */}
 
-                       {end? <div className='bg-white h-full w-full rounded-xl flex transition-all ease-in justify-center items-center'>
-                            <h1 className='text-4xl font-mont font-extrabold animate-pulse'>Thank You</h1>
-                        </div>:
-                        <video ref={videoRef} src={video} loop className='rounded-lg' >
-                            Your browser does not support the video tag.
-                        </video>
+                        {final ? (end ? <div className='h-full w-full overflow-hidden rounded-xl flex transition-all ease-in justify-center items-center'>
+                            <img src={ty} alt="" className='w-full object-cover' />
+                        </div> : <div className={`${finalQ} h-full w-full p-5 rounded-xl flex transition-all flex-col ease-in justify-center items-center`}>
+                            <h1 className='md:text-3xl text-white lg:text-4xl font-space font-extrabold mb-5'>Which is the most popular and expensive crypto currency?</h1>
+                            <div className='grid grid-cols-2 w-full'>
+                                <button onClick={() => {
+                                    setFinalQ('bg-red-500')
+                                    hideQuestion2()
+                                }} className='px-4 py-2 rounded-md m-2 bg-gradient-to-r  hover:bg-gradient-to-l from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'>
+                                    Leetcoin
+                                </button>
+                                <button onClick={() =>{
+                                    setFinalQ('bg-green-500')
+                                    hideQuestion2()
+                                }} className='px-4 py-2 rounded-md m-2 bg-gradient-to-r hover:bg-gradient-to-l from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'>
+                                    Bitcoin
+                                </button>
+                                <button onClick={() => {
+                                    setFinalQ('bg-green-500')
+                                    hideQuestion2()
+                                }} className='px-4 py-2 rounded-md m-2 bg-gradient-to-r hover:bg-gradient-to-l from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'>
+                                    Shiba INU coin
+                                </button>
+                                <button onClick={() => {
+                                    setFinalQ('bg-red-500')
+                                    hideQuestion2()
+                                }} className='px-4 py-2 rounded-md m-2 bg-gradient-to-r hover:bg-gradient-to-l from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'>
+                                    Solana
+                                </button>
+                            </div>
+                        </div>) :
+                            <video ref={videoRef} src={video} loop className='rounded-lg' >
+                                Your browser does not support the video tag.
+                            </video>
                         }
                         <button onClick={handleTogglePlayPause} onMouseEnter={() => setbtnVisiblity('block')} className={`text-7xl absolute text-gray-700 ${btnVisiblity}`}>
                             {isPlaying ? <ion-icon name="pause-circle-outline"></ion-icon> : <ion-icon name="play-circle-outline"></ion-icon>}
                         </button>
                         {showQuestion && (
-                            <div className='absolute top-28 md:top-20 lg:top-60 left-0 w-full h-fll flex justify-center items-center'>
-                                <div className={` w-full md:p-5 p-3 rounded-b-3xl flex flex-col ${correct}`}>
-                                    <p className='text-white font-semibold ml-5 mb-2
-                                    '>{question}</p>
-                                    <div className='w-full grid grid-cols-2'>
-                                        {options.map((option, index) => (
+                            <div className='absolute bottom-5 md:-bottom-32 lg:-bottom-24 left-0 w-full h-fll flex justify-center items-center'>
+                                <div className={` w-full p-3 rounded-b-3xl rounded-t-3xl flex flex-col a ${correct}`}>
+                                    <div className='w-full flex justify-start'>
+                                        {/* {options.map((option, index) => (
                                             <button
-                                                key={index}
-                                                onClick={() => handleOptionClick(option)}
-                                                className='px-4 py-2 rounded-md m-2 bg-gradient-to-r  from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'
+                                            key={index}
+                                            onClick={() => handleOptionClick(option)}
+                                            className='px-4 py-2 rounded-md m-2 bg-gradient-to-r  from-[#15bffd] to-[#9C37FD] hover:bg-gray-700 text-white'
                                             >
-                                                {option}
+                                            {option}
                                             </button>
-                                        ))}
+                                        ))} */}
+                                        <div className='flex lg:flex-row flex-col lg:items-center pl-10  lg:pl-0justify-start w-full'>
+                                            <p className='text-white text-xl font-semibold lg:ml-20 mb-2 lg:w-[30%]'>{question}</p>
+                                            <div className='flex lg:justify-end items-center lg:w-[50%] gap-10'>
+                                                <input onKeyDown={(e) => e.key === 'Enter' ? handleOptionClick(answer) : ''} onChange={(e) => { setAnswer(e.target.value) }} type="text" name='code' className='text-4xl bg-transparent px-3 w-[60%] lg:w-[40%] text-purple-600 font-semibold placeholder:text-white font-space  py-2 border rounded-lg border-purple-500' />
+                                                <button onClick={() => handleOptionClick(answer)} className='text-4xl bg-violet-700 rounded-lg px-3 py-1 flex items-center'><ion-icon name="arrow-forward-outline" /></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

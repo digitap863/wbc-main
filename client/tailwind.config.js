@@ -8,7 +8,7 @@ export default {
     extend: {},
     fontFamily:{
       zen:["Zen Dots","cursive"],
-      mont:["Montserrat","sans-serif"],
+        mont:["Montserrat","sans-serif"],
       space:["Space Grotesk","sans-serif"]
     }
   },
